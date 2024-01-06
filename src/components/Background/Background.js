@@ -3,11 +3,7 @@ import './Background.css';
 
 const Background = () => {
     return (
-        <div className="background">
-            <div className="circle"></div>
-            <div className="square"></div>
-            <div className="triangle"></div>
-        </div>
+        <div className="background"></div>
     );
 };
 
