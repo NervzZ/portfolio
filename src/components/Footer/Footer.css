@@ -1,0 +1,14 @@
+.footer {
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    margin-left: 7%;
+}
+
+.footerContent {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 0.35em;
+    color: black;
+}

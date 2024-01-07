@@ -1,0 +1,14 @@
+.header {
+    width: 25%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0.5%;
+    margin-right: 13%;
+}
+
+.headerTitle {
+    font-family: "Roboto Mono Bold", sans-serif;
+    font-size: 1.2em;
+    color: white;
+}
