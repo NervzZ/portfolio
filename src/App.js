@@ -6,11 +6,16 @@ import Footer from "./components/Footer/Footer";
 import Start from "./components/Buttons/Start";
 import ImageNavigator from "./components/ImageNav/ImageNav";
 
+//images
+import clint from "./images/clint.png"
+
 function App() {
 
     const images = [
-        "images/clint.png",
-    ];
+        clint,
+    ]
+
+    const [isHome, setIsHome] = useState(true)
 
     const [viewSize, setViewSize] =
         useState({width: window.innerWidth, height: window.innerHeight});
@@ -25,15 +30,24 @@ function App() {
             window.removeEventListener('resize', handleWindowResize)
         }
     }, [])
-    return (
-        <div className="App">
-            <Header viewSize={viewSize}/>
-            <Background/>
-            <Start viewSize={viewSize}/>
-            <ImageNavigator images={images}/>
-            <Footer viewSize={viewSize}/>
-        </div>
-    );
+
+    if (isHome) {
+        return (
+            <div className="App">
+                <Header viewSize={viewSize}/>
+                <Background/>
+                <Start viewSize={viewSize} onClick={setIsHome}/>
+                <Footer viewSize={viewSize}/>
+            </div>
+        )
+    } else {
+        return (
+            <div className="App">
+                <Background/>
+                <ImageNavigator images={images} viewSize={viewSize}/>
+            </div>
+        )
+    }
 }
 
 export default App;

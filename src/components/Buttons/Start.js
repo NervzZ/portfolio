@@ -1,4 +1,4 @@
-import './Start.css';
+import './Start.css'
 
 const Start = (props) => {
 
@@ -11,6 +11,7 @@ const Start = (props) => {
     }
 
     const handleClick = () => {
+        props.onClick(false)
         console.log("clicked")
     }
 
@@ -25,4 +26,4 @@ const Start = (props) => {
     )
 }
 
-export default Start;
+export default Start

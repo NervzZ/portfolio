@@ -1,0 +1,13 @@
+.ImageNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+}
+
+.Image {
+    width: 35vw;
+}
