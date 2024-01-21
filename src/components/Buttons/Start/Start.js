@@ -12,7 +12,6 @@ const Start = (props) => {
 
     const handleClick = () => {
         props.onClick(false)
-        console.log("clicked")
     }
 
     return (

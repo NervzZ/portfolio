@@ -1,0 +1,13 @@
+.BackArrow {
+    position: fixed;
+    bottom: 2%;
+    left: 5%;
+    width:3%;
+    transition: transform 0.5s; /* Add transition */
+    transition-timing-function: ease;
+}
+
+.BackArrow:hover {
+    transform: scale(1.3); /* Scale up */
+    cursor: pointer;
+}
