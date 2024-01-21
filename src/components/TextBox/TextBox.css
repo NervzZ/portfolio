@@ -1,0 +1,40 @@
+.TextBoxWrapper {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width:100%;
+}
+
+.TextBox {
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: transform 0.5s, background-color 0.5s, border-width 0.5s, border-radius 0.5s;
+    color: white;
+    border-radius: 0.2em;
+    padding: 0 0.2em;
+    margin-bottom: 0.5em;
+    border: 0px solid white;
+    z-index: 2;
+    max-width: 58%;
+    line-height: 1.1rem;
+}
+
+.TextTitle {
+    font-family: "Roboto Mono Bold", sans-serif;
+    font-size: 0.57em;
+    transition: transform 0.5s;
+}
+
+.TextContent {
+    font-family: "Robo Mono", sans-serif;
+    font-size: 0.37em;
+    transition: transform 0.5s;
+}
+
+.TextBox:hover {
+    transform: scale(1.1);
+    background-color: black;
+    border-width: 0.08em;
+    border-radius: 0;
+}

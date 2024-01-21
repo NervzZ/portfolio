@@ -16,4 +16,11 @@
 .Image {
     max-height: 65vh;
     max-width: 75vw;
+    transition: transform 0.5s;
+    z-index: 1;
+}
+
+.Image:hover {
+    transform: scale(1.04);
+    z-index: 10;
 }
