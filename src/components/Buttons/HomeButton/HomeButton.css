@@ -2,12 +2,12 @@
     fill: black;
     position: fixed;
     bottom: 2%;
-    left: 5%;
+    left: 4%;
     transition: transform 0.5s; /* Add transition */
     transition-timing-function: ease;
 }
 
 .BackArrow:hover {
-    transform: scale(1.3); /* Scale up */
+    transform: scale(1.4); /* Scale up */
     cursor: pointer;
 }
