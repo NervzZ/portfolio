@@ -8,7 +8,7 @@ import ImageNavigator from "./components/ImageNav/ImageNav";
 import {CSSTransition} from "react-transition-group";
 
 //icons
-import BackArrow from "./components/Buttons/BackArrow/BackArrow";
+import HomeButton from "./components/Buttons/HomeButton/HomeButton";
 
 //images
 import w1_1 from "./images/clint.png"
@@ -96,7 +96,7 @@ function App() {
             >
                 <>
                     <ImageNavigator images={images} viewSize={viewSize}/>
-                    <BackArrow onClick={setIsHome}/>
+                    <HomeButton onClick={setIsHome}/>
                 </>
             </CSSTransition>
         </div>

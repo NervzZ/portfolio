@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './ImageNav.css'
+import NavButton from "../Buttons/NavButton/NavButton";
 
 const ImageNavigator = ({images, viewSize}) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -18,9 +19,9 @@ const ImageNavigator = ({images, viewSize}) => {
 
     return (
         <div className="ImageNav">
-            <button onClick={handlePrevious} disabled={currentImageIndex === 0}>Previous</button>
+            <NavButton next={false} onClick={handlePrevious} hide={currentImageIndex === 0}/>
             <img className="Image" src={images[currentImageIndex]} alt="Displayed"/>
-            <button onClick={handleNext} disabled={currentImageIndex === images.length - 1}>Next</button>
+            <NavButton next={true} onClick={handleNext} hide={currentImageIndex === images.length - 1}/>
         </div>
     )
 }

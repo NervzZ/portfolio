@@ -1,0 +1,27 @@
+.NavButton {
+    border-radius: 0.4em;
+    width: 2%;
+    margin-left: 1em;
+    margin-right: 1em;
+    transition: transform 0.5s;
+    transition-timing-function: ease;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.Show {
+    fill: rgba(255, 255, 255, 0.68);
+}
+
+.Hide {
+    fill: rgba(255, 255, 255, 0);
+}
+
+.Show:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+    fill: white;
+}
