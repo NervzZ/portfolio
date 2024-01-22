@@ -11,12 +11,14 @@ const ImageNavigator = ({images, viewSize}) => {
 
     const handleNext = () => {
         if (currentImageIndex < images.length - 1) {
+            setIsLoading(true)
             setCurrentImageIndex(currentImageIndex + 1)
         }
     }
 
     const handlePrevious = () => {
         if (currentImageIndex > 0) {
+            setIsLoading(true)
             setCurrentImageIndex(currentImageIndex - 1)
         }
     }
