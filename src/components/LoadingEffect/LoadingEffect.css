@@ -4,7 +4,7 @@
 }
 
 .LoadingEffect {
-    fill: white;
+    fill: #cbcbcb;
     animation-name: spin;
     animation-duration: 800ms;
     animation-iteration-count: infinite;
