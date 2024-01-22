@@ -19,8 +19,6 @@ const TextBox = (props) => {
                 return ("Immerge yourself in your own work")
             case 13:
                 return ("Stray dog issue")
-            case 18:
-                return ("Poem")
             default:
                 return
         }

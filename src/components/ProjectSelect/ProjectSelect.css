@@ -1,0 +1,26 @@
+.ProjectSelect {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    z-index: 1;
+    font-family: "Roboto Mono Bold", sans-serif;
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding-right: 0.4em;
+    background: black;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+}
+
+.ProjectSelect:hover {
+    cursor: pointer;
+}
+
+.ProjectSelect:after {
+    width: 200px;
+}
+
+.ProjectSelect:focus {
+    outline: none;
+}
