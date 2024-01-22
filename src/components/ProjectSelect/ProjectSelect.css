@@ -10,7 +10,10 @@
     padding-right: 0.4em;
     background: black;
     -webkit-appearance: none;
-    -moz-appearance:none;
+    -moz-appearance: none;
+    -khtml-appearance: none;
+    -o-appearance: none;
+    appearance: none;
 }
 
 .ProjectSelect:hover {
