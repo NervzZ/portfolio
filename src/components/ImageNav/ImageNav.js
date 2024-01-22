@@ -3,9 +3,11 @@ import './ImageNav.css'
 import NavButton from "../Buttons/NavButton/NavButton";
 import TextBox from "../TextBox/TextBox";
 import ProjectSelect from "../ProjectSelect/ProjectSelect";
+import LoadingEffect from "../LoadingEffect/LoadingEffect";
 
 const ImageNavigator = ({images, viewSize}) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const [isLoading, setIsLoading] = useState(true);
 
     const handleNext = () => {
         if (currentImageIndex < images.length - 1) {
@@ -27,9 +29,16 @@ const ImageNavigator = ({images, viewSize}) => {
                 setImageIndex={(id) => setCurrentImageIndex(id)}
             />
             <div className="ImageNav">
-                <NavButton next={false} onClick={handlePrevious} hide={currentImageIndex === 0}/>
-                <img className="Image" src={images[currentImageIndex]} alt="Displayed"/>
-                <NavButton next={true} onClick={handleNext} hide={currentImageIndex === images.length - 1}/>
+                <NavButton next={false} onClick={handlePrevious} hide={isLoading || currentImageIndex === 0}/>
+                {isLoading && <LoadingEffect/>}
+                <img
+                    className="Image"
+                    src={images[currentImageIndex]}
+                    alt="Displayed"
+                    onLoad={() => setIsLoading(false)}
+                    style={{ display: isLoading ? 'none' : 'block' }}
+                />
+                <NavButton next={true} onClick={handleNext} hide={isLoading || currentImageIndex === images.length - 1}/>
             </div>
             <TextBox viewSize={viewSize} id={currentImageIndex}/>
         </>
